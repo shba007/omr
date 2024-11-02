@@ -8,7 +8,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -32,8 +32,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           overwrite: true
-          source: "app,utils,Pipfile,Pipfile.lock"
-          target: "~/psy-omr"
+          source: 'app,utils,Pipfile,Pipfile.lock'
+          target: '~/psy-omr'
 
       - name: Remote Commands on VPS
         uses: appleboy/ssh-action@v1.0.0

@@ -22,5 +22,5 @@ python_version = "3.11"
 
 [scripts]
 dev = "uvicorn app.main:app --reload"
-start = "gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app"
+start = "gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app -b 0.0.0.0:2500"
 test = "pytest"
