@@ -17,4 +17,4 @@ dependencies = [
 dev = ["changelog-gen>=0.13.4", "pytest>=8.3.3"]
 
 [tool.changelog_gen]
-current_version = "1.0.0"
+current_version = "1.0.1"
