@@ -41,6 +41,22 @@ wheels = [
 ]
 
 [[package]]
+name = "changelog-gen"
+version = "0.13.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "gitpython" },
+    { name = "jinja2" },
+    { name = "pygments" },
+    { name = "rtoml" },
+    { name = "typer-slim" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c6/e9/325802b1ffd57bb980b760d74efcf4668a396cd908b9203a21959ada297d/changelog_gen-0.13.4.tar.gz", hash = "sha256:a6ba4a3a37d3a2ffb065bd44db411bb9f73c2fecb9bffb82a67e31f2cb7167d8", size = 109847 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/01/f2ef34e4f2b0cf012f87126924f952d432ac86f43923715d1a12683cd9a9/changelog_gen-0.13.4-py3-none-any.whl", hash = "sha256:57fe36d382c5207d160876820a6c12320cc288a5d1289db556ad29919acaced2", size = 27520 },
+]
+
+[[package]]
 name = "click"
 version = "8.1.7"
 source = { registry = "https://pypi.org/simple" }
@@ -123,6 +139,30 @@ wheels = [
 [package.optional-dependencies]
 standard = [
     { name = "uvicorn", extra = ["standard"] },
+]
+
+[[package]]
+name = "gitdb"
+version = "4.0.11"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "smmap" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/19/0d/bbb5b5ee188dec84647a4664f3e11b06ade2bde568dbd489d9d64adef8ed/gitdb-4.0.11.tar.gz", hash = "sha256:bf5421126136d6d0af55bc1e7c1af1c397a34f5b7bd79e776cd3e89785c2b04b", size = 394469 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fd/5b/8f0c4a5bb9fd491c277c21eff7ccae71b47d43c4446c9d0c6cff2fe8c2c4/gitdb-4.0.11-py3-none-any.whl", hash = "sha256:81a3407ddd2ee8df444cbacea00e2d038e40150acfa3001696fe0dcf1d3adfa4", size = 62721 },
+]
+
+[[package]]
+name = "gitpython"
+version = "3.1.43"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "gitdb" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b6/a1/106fd9fa2dd989b6fb36e5893961f82992cf676381707253e0bf93eb1662/GitPython-3.1.43.tar.gz", hash = "sha256:35f314a9f878467f5453cc1fee295c3e18e52f1b99f10f6cf5b1682e968a9e7c", size = 214149 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e9/bd/cc3a402a6439c15c3d4294333e13042b915bbeab54edc457c723931fed3f/GitPython-3.1.43-py3-none-any.whl", hash = "sha256:eec7ec56b92aad751f9912a73404bc02ba212a23adb2c7098ee668417051a1ff", size = 207337 },
 ]
 
 [[package]]
@@ -527,6 +567,27 @@ wheels = [
 ]
 
 [[package]]
+name = "rtoml"
+version = "0.11.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c8/67/ca8b92b2b8aa231d427999609dd289e6bc8511b4a6871e2b533871c9b3e3/rtoml-0.11.0.tar.gz", hash = "sha256:a1d1ec36261c47169934a6c0f713a6cdf917604b3f72a72a809c3a68384255d4", size = 23759 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/36/69c9c078d8821b0801e14898b2fc92da53185db2f683dd0faf78c66fad7e/rtoml-0.11.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:34c4fd6e6465e6de84ac499e19ae3e4b0d4cd3f9763d1a72a75bd2ef4d0e466a", size = 315058 },
+    { url = "https://files.pythonhosted.org/packages/5a/ac/25f7b10168fa7ed25a3b28450c66a8be7e37c019721bc5f228237474c6a0/rtoml-0.11.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:0095bc482788d39c6c3e2f9f3a6f7a8149ee1cefe624129e2afc90512d8f16b7", size = 307112 },
+    { url = "https://files.pythonhosted.org/packages/26/43/f1cac9c12a752e3a83f66317f7947f37f1ec5828848cbbb99e37d84a7915/rtoml-0.11.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d90b06a36325c9ae6e273669d811aa0e6b8ae41fa9ffe3949f02ef1870dc0ad5", size = 348241 },
+    { url = "https://files.pythonhosted.org/packages/39/ea/b6ef0c18b635c6332929ac2198186afeae36d9d33a8d68513af7cd1a0ccb/rtoml-0.11.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:902148f2bd13b4c64d2c5ed576910c5a0a2c86dc052f4e31ca1855131ee157c8", size = 355577 },
+    { url = "https://files.pythonhosted.org/packages/00/d3/ac534011c12df090d44cce2cbaf023de90c0eba0dc83e74e375989c8cb2c/rtoml-0.11.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:d84bbdad28e24f66b8ad632fb7cbec64b921fdff48bf57f4f7179648726f7e54", size = 372476 },
+    { url = "https://files.pythonhosted.org/packages/25/c9/db4cebaed3789c8d4333d362ed327dd1ba791f4004d6e440470d3239899e/rtoml-0.11.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:4b1d4d4b8d765cf5228e5def9c39837d5b70c6e51422e05b975898c8a765fd1e", size = 497329 },
+    { url = "https://files.pythonhosted.org/packages/8b/7e/28f5e4fa9a3aee864b34d774cf4130c84f5c3f075b56ce6116bb2ed3df29/rtoml-0.11.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8b900dcdf2068105b81b1ded3342dad952e3ea7d4a949473a690c686116a1730", size = 341121 },
+    { url = "https://files.pythonhosted.org/packages/84/10/05b794e781c05b5bce4837e4f9a99cbc69f9f1da3b13cf36db37b26d5108/rtoml-0.11.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:4a491ad282b918292812518a61f432d6becf1b4a965d9c6595b7f00b1b722e61", size = 351976 },
+    { url = "https://files.pythonhosted.org/packages/94/e0/67e8dabd5253ae8364150e475c60e09caddbb31e3f43a51e3dbf3982ff37/rtoml-0.11.0-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:d5ccbe43af82f17efed273b517e29febbd8225dab9a314f5728465b61a34781a", size = 526442 },
+    { url = "https://files.pythonhosted.org/packages/e9/89/de40a48005025c20b392b5fba5d88427b92ebcbc09892ec37cc51daa8d14/rtoml-0.11.0-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:4125260584290461825abac23dafb34048dcbedaf9fafea913b5f0b1691c1ad0", size = 512134 },
+    { url = "https://files.pythonhosted.org/packages/27/d3/20e26214e4736c10653477b1bd616c5f2a79571495c28dec725bbbae7cfb/rtoml-0.11.0-cp312-none-win32.whl", hash = "sha256:6e42385f510458f68587051a533cd0161653e1f2b381400a4873eab6f706940b", size = 217810 },
+    { url = "https://files.pythonhosted.org/packages/df/7b/8d908a634ba31c27f8fe38a030e9406064960e1b87053bd45da683166044/rtoml-0.11.0-cp312-none-win_amd64.whl", hash = "sha256:fdce3405e50ba73a45acdf36a793e3563da04fc913c53d54852c5d6cf1eb6d25", size = 226747 },
+    { url = "https://files.pythonhosted.org/packages/87/53/01fcd15027bee67947d1965bf610f7f68b9c037ffb833eaf91ec16a394fb/rtoml-0.11.0-cp312-none-win_arm64.whl", hash = "sha256:affc854919b46555f37d1408cb67f06f7453744bf1c5c1c53b69ed8b5227a28d", size = 218370 },
+]
+
+[[package]]
 name = "scipy"
 version = "1.14.1"
 source = { registry = "https://pypi.org/simple" }
@@ -560,6 +621,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/58/15/8b3609fd3830ef7b27b655beb4b4e9c62313a4e8da8c676e142cc210d58e/shellingham-1.5.4.tar.gz", hash = "sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de", size = 10310 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl", hash = "sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686", size = 9755 },
+]
+
+[[package]]
+name = "smmap"
+version = "5.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/88/04/b5bf6d21dc4041000ccba7eb17dd3055feb237e7ffc2c20d3fae3af62baa/smmap-5.0.1.tar.gz", hash = "sha256:dceeb6c0028fdb6734471eb07c0cd2aae706ccaecab45965ee83f11c8d3b1f62", size = 22291 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a7/a5/10f97f73544edcdef54409f1d839f6049a0d79df68adbc1ceb24d1aaca42/smmap-5.0.1-py3-none-any.whl", hash = "sha256:e6d8668fa5f93e706934a62d7b4db19c8d9eb8cf2adbb75ef1b675aa332b69da", size = 24282 },
 ]
 
 [[package]]
@@ -599,6 +669,19 @@ wheels = [
 ]
 
 [[package]]
+name = "typer-slim"
+version = "0.12.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d0/4d/d79c0dd7f8df554fb6810528a61430e7e74de76fd83f03db1bcb25906678/typer_slim-0.12.5.tar.gz", hash = "sha256:c8e3fcf93cc7dd584036df8755d2e2363f85f8a4dd028c7911eed3f00cf0ebb1", size = 99015 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/98/d4/ced1f8074819b43804a0a5015f33bae422330e8d38b1992be91fa947190c/typer_slim-0.12.5-py3-none-any.whl", hash = "sha256:9a994f721b828783dbf144e17461b1c720bb4598e0d5eff7c1b3f08ee58cb062", size = 47110 },
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.12.2"
 source = { registry = "https://pypi.org/simple" }
@@ -622,6 +705,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "changelog-gen" },
     { name = "pytest" },
 ]
 
@@ -636,7 +720,10 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pytest", specifier = ">=8.3.3" }]
+dev = [
+    { name = "changelog-gen", specifier = ">=0.13.4" },
+    { name = "pytest", specifier = ">=8.3.3" },
+]
 
 [[package]]
 name = "uvicorn"
