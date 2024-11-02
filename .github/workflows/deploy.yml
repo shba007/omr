@@ -113,7 +113,6 @@ jobs:
             docker run --detach \
               --name ${{ needs.build_web.outputs.image_title }} \
               --restart unless-stopped \
-              --mount type=bind,source=$(pwd)/${{ needs.build_web.outputs.image_title }}/static,target=/app/static,readonly \
               --env-file ~/${{ needs.build_web.outputs.image_title }}/.env.prod \
               -p ${{ env.PORT }}:80 \
               ${{ needs.build_web.outputs.image_name }}

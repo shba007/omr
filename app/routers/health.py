@@ -3,8 +3,8 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    build_id: str
-    version: str
+    build_id: str = ''
+    version: str = ''
 
 
 config = Settings()
