@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 import base64
 
-from app.utils.scan import (
+from utils.scan import (
     align_crop,
     align_inputs,
     detect_markers,

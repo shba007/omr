@@ -34,10 +34,10 @@ def detect_markers(image_buffer, findNecessary=True):
 
     if ids is None:
         raise HTTPException(status_code=404, detail="Unable to Detect any marker")
-    
-    print("ids",ids.flatten())
+
+    print("ids", ids.flatten())
     sufficient = sum(num in ids for num in [1, 2, 9, 11]) >= 4
-    print("total found",list(num in ids for num in [1, 2, 9, 11]))
+    print("total found", list(num in ids for num in [1, 2, 9, 11]))
 
     if not sufficient and findNecessary:
         raise HTTPException(status_code=404, detail="Unable to Detect Corner markers")

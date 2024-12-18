@@ -14,7 +14,19 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["changelog-gen>=0.13.4", "pytest>=8.3.3"]
+dev = [
+  "changelog-gen>=0.13.4",
+  "pytest>=8.3.3",
+  "ruff>=0.8.3",
+  "taskipy>=1.14.1",
+]
+
+[tool.taskipy.tasks]
+dev = "fastapi dev server/main.py"
+lint = "ruff check --fix"
+format = "ruff format"
+docker-build = "docker build --build-arg VERSION_TAG=dev -t unpsy-omr:dev ."
+docker-start = "docker run --detach --name unpsy-omr-dev --env-file .env.prod -p 2220:8000 unpsy-omr:dev"
 
 [tool.changelog_gen]
 current_version = "1.0.1"

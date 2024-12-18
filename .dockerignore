@@ -1,18 +1,31 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# Git/Github
+.git
+.github
+.gitignore
 
-# Environments
-.env
-.env.*
-!.env.example
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Formatter Cache
+# FastAPI dev/build outputs
+__pycache__
 .ruff_cache
+
+# Python dependencies
+.venv
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Env files
+.env*
+!.env.example
+
+# Dockerfile
+.dockerignore
+Dockerfile
+
+# Tests
+tests
